@@ -1,4 +1,4 @@
-package com.soulcode.helpdesk.controller;
+package com.soulcode.helpdesk.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,8 +12,8 @@ public class TecnicoController {
     @GetMapping("/tecnico")
     public String painelTecnico(Model model) {
         // Aqui você pode adicionar lógica para recuperar os chamados atribuídos ao técnico do serviço
-        // Exemplo: List<Chamado> chamados = tecnicoService.listarChamadosAtribuidos(tecnico.getId());
-        // model.addAttribute("chamados", chamados);
+        // Exemplo: List<ChamadoModel> chamados = tecnicoService.listarChamadosAtribuidos(tecnico.getId());
+        // models.addAttribute("chamados", chamados);
         return "tecnico/painel-tecnico";
     }
 
@@ -21,16 +21,16 @@ public class TecnicoController {
     @GetMapping("/tecnico/chamados-atribuidos")
     public String chamadosAtribuidos(Model model) {
         // Aqui você pode adicionar lógica para recuperar os chamados atribuídos ao técnico do serviço
-        // Exemplo: List<Chamado> chamados = tecnicoService.listarChamadosAtribuidos(tecnico.getId());
-        // model.addAttribute("chamados", chamados);
+        // Exemplo: List<ChamadoModel> chamados = tecnicoService.listarChamadosAtribuidos(tecnico.getId());
+        // models.addAttribute("chamados", chamados);
         return "tecnico/chamados-atribuidos";
     }
 
     @GetMapping("/tecnico/chamados-disponiveis")
     public String chamadosDisponiveis(Model model) {
         // Aqui você pode adicionar lógica para recuperar os chamados atribuídos ao técnico do serviço
-        // Exemplo: List<Chamado> chamados = tecnicoService.listarChamadosAtribuidos(tecnico.getId());
-        // model.addAttribute("chamados", chamados);
+        // Exemplo: List<ChamadoModel> chamados = tecnicoService.listarChamadosAtribuidos(tecnico.getId());
+        // models.addAttribute("chamados", chamados);
         return "tecnico/chamados-disponiveis";
     }
 
