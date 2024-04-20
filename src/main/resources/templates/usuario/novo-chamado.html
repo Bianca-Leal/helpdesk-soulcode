@@ -1,0 +1,25 @@
+<!-- File: novo-chamado.html (Aloque este arquivo em resources/templates/usuario/ ou ajuste conforme sua estrutura de diretórios) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Chamado</title>
+</head>
+<body>
+<h1>Criar Novo Chamado</h1>
+<form action="/usuario/novo-chamado" method="POST">
+    <label for="descricao">Descrição:</label><br>
+    <input type="text" id="descricao" name="descricao"><br>
+
+    <label for="prioridade">Prioridade:</label><br>
+    <select id="prioridade" name="prioridade">
+        <option value="alta">Alta</option>
+        <option value="media">Média</option>
+        <option value="baixa">Baixa</option>
+    </select><br>
+
+    <input type="submit" value="Criar Chamado">
+</form>
+</body>
+</html>
