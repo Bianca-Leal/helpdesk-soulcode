@@ -7,7 +7,17 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class UsuarioController {
 
-    @GetMapping("/usuario")
+    @GetMapping("/index")
+    public String login() {
+        return "index";
+    }
+
+    @GetMapping("usuario/cadastro-usuario")
+    public String cadastroUsuario() {
+        return "usuario/cadastro-usuario";
+    }
+
+    @GetMapping("/usuario/painel-usuario")
     public String painelUsuario(Model model) {
         // Aqui você pode adicionar lógica para recuperar os chamados do usuário do serviço
         // Exemplo: List<ChamadoModel> chamados = usuarioService.listarChamados(usuario.getId());
