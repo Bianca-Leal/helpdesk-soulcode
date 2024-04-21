@@ -2,16 +2,14 @@ package com.soulcode.helpdesk.models;
 
 import jakarta.persistence.*;
 
-import java.util.UUID;
-
 @Entity
 @Table(name = "TB_CHAMADO")
 public class ChamadoModel {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
-    private UUID id;
+    private Long id;
     private int idUsuario;
     @Column
     private String setor;
@@ -24,11 +22,11 @@ public class ChamadoModel {
     @Column
     private String chamadoStatus;
 
-    public UUID getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

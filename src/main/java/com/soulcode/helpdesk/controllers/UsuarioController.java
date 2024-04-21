@@ -1,5 +1,8 @@
 package com.soulcode.helpdesk.controllers;
 
+import com.soulcode.helpdesk.models.UsuarioModel;
+import com.soulcode.helpdesk.repositories.UsuarioRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -7,14 +10,23 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class UsuarioController {
 
+    @Autowired
+    UsuarioRepository usuarioRepository;
+
     @GetMapping("/index")
     public String login() {
         return "index";
     }
 
-    @GetMapping("usuario/cadastro-usuario")
+    @RequestMapping(value="usuario/cadastro-usuario", method= RequestMethod.GET)
     public String cadastroUsuario() {
         return "usuario/cadastro-usuario";
+    }
+
+    @PostMapping("/salvar")
+    public String cadastroUsuario(UsuarioModel usuario) {
+        usuarioRepository.save(usuario);
+        return "redirect:/usuario/cadastro-usuario";
     }
 
     @GetMapping("/usuario/painel-usuario")

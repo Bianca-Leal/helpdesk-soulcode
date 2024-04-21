@@ -9,9 +9,9 @@ import java.util.UUID;
 public class UsuarioModel {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
-    private UUID id;
+    private Long id;
     @Column
     private String nome;
     @Column
@@ -21,11 +21,11 @@ public class UsuarioModel {
     @Column
     private String tipoUsuario;
 
-    public UUID getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
