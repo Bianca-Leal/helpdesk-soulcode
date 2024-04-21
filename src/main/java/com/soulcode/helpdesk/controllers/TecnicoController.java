@@ -9,14 +9,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class TecnicoController {
 
-    @GetMapping("/tecnico")
+    @GetMapping("/tecnico/painel-tecnico")
     public String painelTecnico(Model model) {
         // Aqui você pode adicionar lógica para recuperar os chamados atribuídos ao técnico do serviço
         // Exemplo: List<ChamadoModel> chamados = tecnicoService.listarChamadosAtribuidos(tecnico.getId());
         // models.addAttribute("chamados", chamados);
         return "tecnico/painel-tecnico";
     }
-
 
     @GetMapping("/tecnico/chamados-atribuidos")
     public String chamadosAtribuidos(Model model) {

@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Controller
 public class UsuarioController {
 
@@ -14,11 +16,21 @@ public class UsuarioController {
     UsuarioRepository usuarioRepository;
 
     @GetMapping("/index")
-    public String login() {
-        return "index";
+    public String login(UsuarioModel usuario) {
+        List<UsuarioModel> users = usuarioRepository.findByLogin(usuario.getLogin());
+
+        String tela = null;
+        for (UsuarioModel value : users) {
+            if(value.getTipoUsuario().equals("tecnico")){
+                tela =  "redirect:/tecnico/painel-tecnico";
+            } else{
+                tela =  "redirect:/usuario/painel-usuario";
+            }
+        }
+        return tela;
     }
 
-    @RequestMapping(value="usuario/cadastro-usuario", method= RequestMethod.GET)
+    @GetMapping("usuario/cadastro-usuario")
     public String cadastroUsuario() {
         return "usuario/cadastro-usuario";
     }
