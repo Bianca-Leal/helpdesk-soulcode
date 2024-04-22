@@ -1,73 +1,72 @@
-/* CSS Combined and Adapted */
 .sidebar {
-    background-color: #343a40; /* Dark background for the sidebar */
-    color: white; /* White text color */
-    height: 100vh; /* Make sidebar full height of the viewport */
-    width: 200px; /* Sidebar width */
-    overflow-y: auto; /* Enable scrolling if content is taller than the screen */
+    background-color: #343a40;
+    color: white;
+    height: 100vh;
+    width: 200px;
+    overflow-y: auto;
 }
 
 .sidebar-header {
-    padding: 20px; /* Padding for sidebar header */
+    padding: 20px;
 }
 
 .sidebar-menu {
-    list-style-type: none; /* No bullets for list items */
-    padding: 0; /* No padding for list */
+    list-style-type: none;
+    padding: 0;
 }
 
 .sidebar-menu-item a {
-    display: block; /* Block display for links */
-    padding: 10px 20px; /* Padding around links */
-    color: white; /* White text color for links */
-    text-decoration: none; /* No underline for links */
-    background-color: #343a40; /* Background color for links */
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    background-color: #343a40;
 }
 
 .sidebar-menu-item a:hover {
-    background-color: #23272b; /* Darker background on hover */
-    text-decoration: none; /* No underline on hover */
+    background-color: #23272b;
+    text-decoration: none;
 }
 
 .content {
-    padding: 20px; /* Padding for content */
+    padding: 20px;
 }
 
 .tabela-chamados-criados {
-    border-collapse: collapse; /* Collapse borders for table */
-    width: 100%; /* Full width table */
+    border-collapse: collapse;
+    width: 100%;
 }
 
 .estrutura-tabela {
-    border: 1px solid black; /* Border for table cells */
-    padding: 8px; /* Padding inside table cells */
+    border: 1px solid black;
+    padding: 8px;
 }
 
 body {
-    background-color: #f8f9fa; /* Light grey background for body */
+    background-color: #f8f9fa;
 }
 
 .login-container {
-    margin-top: 100px; /* Margin top for login container */
+    margin-top: 100px;
 }
 
 .login-form {
-    background-color: #ffffff; /* White background for login form */
-    padding: 30px; /* Padding inside login form */
-    border-radius: 10px; /* Rounded corners for login form */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Shadow for login form */
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .login-form-header {
-    text-align: center; /* Center-align text in login form header */
-    margin-bottom: 30px; /* Margin bottom for login form header */
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .login-form-header h2 {
-    color: #333333; /* Dark grey text color for h2 in login form */
+    color: #333333;
 }
 
 .login-form-footer {
-    text-align: center; /* Center-align text in login form footer */
-    margin-top: 20px; /* Margin top for login form footer */
+    text-align: center;
+    margin-top: 20px;
 }
