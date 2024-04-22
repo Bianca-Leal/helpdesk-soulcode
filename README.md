@@ -66,7 +66,9 @@ mvn spring-boot:run
 
 - [Gabriele Stephanie](https://www.linkedin.com/in/gabrielle-mestrinho-b162661b9/)
 
-- [Karen Nogueira]
+- [Daniela Sousa](https://www.linkedin.com/in/daniela-sousa-lima/)
+
+- [Karen Nogueira](https://www.linkedin.com/in/karennogueira/)
 
 - [Alyce]
 
