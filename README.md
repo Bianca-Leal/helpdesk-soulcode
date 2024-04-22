@@ -56,17 +56,21 @@ mvn spring-boot:run
 
 - [Bianca Leal](https://www.linkedin.com/in/bianca-leall/)
 
-- [Stephanie Lima]
+- [Stephanie Lima](https://www.linkedin.com/in/stephanie-lima-rocha-07389291/)
 
-- [Gabriele Stephanie]
+- [Aline](https://www.linkedin.com/in/alinealvesdacosta/)
 
 - [Daniela Botelho](https://www.linkedin.com/in/dani-botelho/)
+
+- [Cecilia](https://www.linkedin.com/in/cec%C3%ADlia-galv%C3%A3o/)
+
+- [Gabriele Stephanie](https://www.linkedin.com/in/gabrielle-mestrinho-b162661b9/)
 
 - [Karen Nogueira]
 
 - [Alyce]
 
-- [Aline]
+
 ## Licença
 
 [MIT](https://choosealicense.com/licenses/mit/)

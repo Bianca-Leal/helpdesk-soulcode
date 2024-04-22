@@ -1,42 +1,73 @@
+/* CSS Combined and Adapted */
 .sidebar {
-  background-color: #343a40;
-  color: #ffffff;
-  height: 100vh;
+    background-color: #343a40; /* Dark background for the sidebar */
+    color: white; /* White text color */
+    height: 100vh; /* Make sidebar full height of the viewport */
+    width: 200px; /* Sidebar width */
+    overflow-y: auto; /* Enable scrolling if content is taller than the screen */
 }
+
 .sidebar-header {
-  padding: 20px;
+    padding: 20px; /* Padding for sidebar header */
 }
+
 .sidebar-menu {
-  list-style-type: none;
-  padding: 0;
+    list-style-type: none; /* No bullets for list items */
+    padding: 0; /* No padding for list */
 }
-.sidebar-menu-item {
-  padding: 10px 20px;
+
+.sidebar-menu-item a {
+    display: block; /* Block display for links */
+    padding: 10px 20px; /* Padding around links */
+    color: white; /* White text color for links */
+    text-decoration: none; /* No underline for links */
+    background-color: #343a40; /* Background color for links */
 }
+
+.sidebar-menu-item a:hover {
+    background-color: #23272b; /* Darker background on hover */
+    text-decoration: none; /* No underline on hover */
+}
+
 .content {
-  padding: 20px;
+    padding: 20px; /* Padding for content */
+}
+
+.tabela-chamados-criados {
+    border-collapse: collapse; /* Collapse borders for table */
+    width: 100%; /* Full width table */
+}
+
+.estrutura-tabela {
+    border: 1px solid black; /* Border for table cells */
+    padding: 8px; /* Padding inside table cells */
 }
 
 body {
-  background-color: #f8f9fa;
+    background-color: #f8f9fa; /* Light grey background for body */
 }
+
 .login-container {
-  margin-top: 100px;
+    margin-top: 100px; /* Margin top for login container */
 }
+
 .login-form {
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff; /* White background for login form */
+    padding: 30px; /* Padding inside login form */
+    border-radius: 10px; /* Rounded corners for login form */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Shadow for login form */
 }
+
 .login-form-header {
-  text-align: center;
-  margin-bottom: 30px;
+    text-align: center; /* Center-align text in login form header */
+    margin-bottom: 30px; /* Margin bottom for login form header */
 }
+
 .login-form-header h2 {
-  color: #333333;
+    color: #333333; /* Dark grey text color for h2 in login form */
 }
+
 .login-form-footer {
-  text-align: center;
-  margin-top: 20px;
+    text-align: center; /* Center-align text in login form footer */
+    margin-top: 20px; /* Margin top for login form footer */
 }
