@@ -22,9 +22,9 @@ public class UsuarioController {
         String tela = null;
         for (UsuarioModel value : users) {
             if(value.getTipoUsuario().equals("tecnico")){
-                tela =  "redirect:/tecnico/painel-tecnico";
+                tela =  "redirect:/tecnico/painel-tecnico?nome="+value.getNome();
             } else{
-                tela =  "redirect:/usuario/painel-usuario";
+                tela =  "redirect:/usuario/painel-usuario?nome="+value.getNome();
             }
         }
         return tela;
@@ -42,10 +42,9 @@ public class UsuarioController {
     }
 
     @GetMapping("/usuario/painel-usuario")
-    public String painelUsuario(Model model) {
-        // Aqui você pode adicionar lógica para recuperar os chamados do usuário do serviço
-        // Exemplo: List<ChamadoModel> chamados = usuarioService.listarChamados(usuario.getId());
-        // models.addAttribute("chamados", chamados);
+    public String painelUsuario(@RequestParam String nome , Model model) {
+
+        model.addAttribute("nome", nome);
         return "usuario/painel-usuario";
     }
 

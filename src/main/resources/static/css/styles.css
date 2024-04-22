@@ -15,7 +15,7 @@
     padding: 0;
 }
 
-.sidebar-menu-item a {
+.sidebar-menu-item a, span {
     display: block;
     padding: 10px 20px;
     color: white;
@@ -26,6 +26,10 @@
 .sidebar-menu-item a:hover {
     background-color: #23272b;
     text-decoration: none;
+}
+
+.saudacao{
+    padding: 10px 20px;
 }
 
 .content {
@@ -70,3 +74,5 @@ body {
     text-align: center;
     margin-top: 20px;
 }
+
+
