@@ -10,7 +10,7 @@ public class ChamadoModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
     private Long id;
-    private int idUsuario;
+    private Long idUsuario;
     @Column
     private String setor;
     @Column
@@ -30,11 +30,11 @@ public class ChamadoModel {
         this.id = id;
     }
 
-    public int getIdUsuario() {
+    public Long getIdUsuario() {
         return idUsuario;
     }
 
-    public void setIdUsuario(int idUsuario) {
+    public void setIdUsuario(Long idUsuario) {
         this.idUsuario = idUsuario;
     }
 

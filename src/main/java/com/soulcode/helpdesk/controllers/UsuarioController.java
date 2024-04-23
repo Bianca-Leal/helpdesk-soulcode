@@ -1,6 +1,8 @@
 package com.soulcode.helpdesk.controllers;
 
+import com.soulcode.helpdesk.models.ChamadoModel;
 import com.soulcode.helpdesk.models.UsuarioModel;
+import com.soulcode.helpdesk.repositories.ChamadoRepository;
 import com.soulcode.helpdesk.repositories.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,6 +16,7 @@ public class UsuarioController {
 
     @Autowired
     UsuarioRepository usuarioRepository;
+    ChamadoRepository chamadoRepository;
 
     @GetMapping("/index")
     public String login(UsuarioModel usuario) {
@@ -52,4 +55,13 @@ public class UsuarioController {
     public String listarChamados(Model model) {
         return "/usuario/listar-chamados";
     }
+
+
+
+//    @GetMapping("/usuario/listar-chamados")
+//    public String chamadosDisponiveis(Model model) {
+//        List<ChamadoModel> items = chamadoRepository.findByStatus("Aguardando Técnico");
+//        model.addAttribute("items", items);
+//        return "/usuario/listar-chamados";
+//    }
 }

@@ -27,7 +27,7 @@ public class TecnicoController {
 
     @GetMapping("tecnico/chamados-disponiveis")
     public String chamadosDisponiveis(Model model) {
-        List<ChamadoModel> items = chamadoRepository.findByStatus("Aguardando Técnico");
+        List<ChamadoModel> items = chamadoRepository.findByStatus("aguardando");
         model.addAttribute("items", items);
         return "tecnico/chamados-disponiveis";
     }
