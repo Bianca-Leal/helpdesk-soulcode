@@ -1,9 +1,10 @@
 .sidebar {
-    background-color: #343a40;
-    color: white;
+    top: 0;
+    left: 0;
     height: 100vh;
-    width: 200px;
-    overflow-y: auto;
+    width: 20%;
+    background-color:#343a40;
+    color: white;
 }
 
 .sidebar-header {
@@ -28,12 +29,40 @@
     text-decoration: none;
 }
 
+.main {
+    display: flex;
+    width:80%;
+        flex-direction: row;
+        justify-content: space-evenly;
+        justify-items: center;
+        align-items: center;
+        height: 100vh;
+
+
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+    }
+
+    .main {
+        margin-top: 100px;
+        width: 100%;
+        height: auto;
+    }
+}
+
 .saudacao{
     padding: 10px 20px;
 }
 
 .content {
     padding: 20px;
+    display:flex;
+    align-items: center;
 }
 
 .tabela-chamados-criados {
@@ -82,6 +111,25 @@ body {
 .paddings{
     padding-top: 100px;
     padding-left: 100px;
+}
+
+.custom-column {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      padding: 10px 10px;
+      width:100%;
+}
+@media (max-width: 800px){
+      .custom-column {
+         flex-direction: column;
+         justify-content: space-evenly;
+         justify-item: center;
+      }
+    }
+
+.col-no-width {
+  flex: 0 0 auto;
 }
 
 
