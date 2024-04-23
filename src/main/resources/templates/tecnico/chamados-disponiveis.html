@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/styles.css">
     <title>Chamados Disponíveis</title>
 </head>
@@ -27,6 +28,7 @@
             <div class="custom-column">
 
                 <table class="table table-striped table-hover">
+                    <thead>
                     <tr>
                         <th>Usuario</th>
                         <th>Setor</th>
@@ -35,13 +37,24 @@
                         <th>Data de Início</th>
                         <th>Status</th>
                     </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="item: ${items}">
+                        <td th:text="${item.idUsuario}"></td>
+                        <td th:text="${item.setor}"></td>
+                        <td th:text="${item.descricao}"></td>
+                        <td th:text="${item.prioridade}"></td>
+                        <td th:text="${item.dataInicio}"></td>
+                        <td th:text="${item.chamadoStatus}"></td>
+                    </tr>
+
                     <tr pe-auto>
                         <td>Maria Joana</td>
                         <td>Setor XPTW</td>
                         <td>Configuração de acesso</td>
                         <td>Alta</td>
                         <td>2024-04-19</td>
-                        <td>Em atendimento</td>
+                        <td>Aguardando Técnico</td>
                     </tr>
                     <tr>
                         <td>João Eduardo</td>
@@ -51,37 +64,16 @@
                         <td>2024-04-19</td>
                         <td>Aguardando Técnico</td>
                     </tr>
-                    <tr>
-                        <td>Mateus Joana</td>
-                        <td>Setor XPTW</td>
-                        <td>Mouse com problema</td>
-                        <td>Alta</td>
-                        <td>2024-04-19</td>
-                        <td>Em atendimento</td>
-                    </tr>
-                    <tr>
-                        <td>Carlos Joana</td>
-                        <td>Setor XPTW</td>
-                        <td>Computador Lento</td>
-                        <td>Alta</td>
-                        <td>2024-04-19</td>
-                        <td>Em atendimento</td>
-                    </tr>
-                    <tr>
-                        <td>Luiza Joana</td>
-                        <td>Setor XPTW</td>
-                        <td>Problema no Servidor</td>
-                        <td>Alta</td>
-                        <td>2024-04-19</td>
-                        <td>Em atendimento</td>
-                    </tr>
+                    </tbody>
                 </table>
             </div>
-         </div>
+        </div>
     </div>
 </div>
 <!-- Option 1: Bootstrap Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 
 </body>
 </html>
