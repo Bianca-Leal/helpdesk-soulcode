@@ -18,7 +18,6 @@
                 <h3>HelpDesk SoulCode</h3>
             </div>
             <ul class="sidebar-menu">
-
                 <li class="sidebar-menu-item"><a href="/usuario/painel-usuario?nome=">Painel usuário</a></li>
                 <li class="sidebar-menu-item"><a href="/index">Sair</a></li>
             </ul>
@@ -32,7 +31,7 @@
                             Novo Chamado
                         </div>
                         <div class="card-body">
-                            <form action="/salvar" method="post">
+                            <form action="/salvarChamado" method="post">
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">Usuário</span>
@@ -71,7 +70,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">Status</span>
                                     </div>
-                                    <select class="form-control" id="status" name="status">
+                                    <select class="form-control" id="chamadoStatus" name="chamadoStatus">
                                         <option value="aguardando">Aguardando técnico</option>
                                         <option value="atendimento">Em atendimento</option>
                                         <option value="escalado">Escalado para outro setor</option>
