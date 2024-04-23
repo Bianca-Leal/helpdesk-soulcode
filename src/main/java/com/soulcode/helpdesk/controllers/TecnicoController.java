@@ -11,33 +11,22 @@ public class TecnicoController {
 
     @GetMapping("/tecnico/painel-tecnico")
     public String painelTecnico(Model model) {
-        // Aqui você pode adicionar lógica para recuperar os chamados atribuídos ao técnico do serviço
-        // Exemplo: List<ChamadoModel> chamados = tecnicoService.listarChamadosAtribuidos(tecnico.getId());
-        // models.addAttribute("chamados", chamados);
         return "tecnico/painel-tecnico";
     }
 
     @GetMapping("/tecnico/chamados-atribuidos")
     public String chamadosAtribuidos(Model model) {
-        // Aqui você pode adicionar lógica para recuperar os chamados atribuídos ao técnico do serviço
-        // Exemplo: List<ChamadoModel> chamados = tecnicoService.listarChamadosAtribuidos(tecnico.getId());
-        // models.addAttribute("chamados", chamados);
         return "tecnico/chamados-atribuidos";
     }
 
     @GetMapping("/tecnico/chamados-disponiveis")
     public String chamadosDisponiveis(Model model) {
-        // Aqui você pode adicionar lógica para recuperar os chamados atribuídos ao técnico do serviço
-        // Exemplo: List<ChamadoModel> chamados = tecnicoService.listarChamadosAtribuidos(tecnico.getId());
-        // models.addAttribute("chamados", chamados);
         return "tecnico/chamados-disponiveis";
     }
 
     @PostMapping("/tecnico/modificar-status")
     public String modificarStatus(@RequestParam("id") Long id,
                                   @RequestParam("novoStatus") String novoStatus) {
-        // Aqui você pode adicionar lógica para modificar o status do chamado
-        // Exemplo: tecnicoService.modificarStatusChamado(id, novoStatus);
-        return "redirect:/tecnico"; // Redireciona de volta para a página de listagem de chamados do técnico
+        return "redirect:/tecnico";
     }
 }
