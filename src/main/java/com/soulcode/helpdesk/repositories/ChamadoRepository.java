@@ -11,7 +11,5 @@ import java.util.List;
 
 @Repository
 public interface ChamadoRepository extends JpaRepository<ChamadoModel, Long> {
-
-    @Query("SELECT c FROM ChamadoModel c WHERE c.chamadoStatus like :status")
-       List<ChamadoModel> findByStatus(@Param("status") String status);
+    List<ChamadoModel> findByIdUsuario(Long idUsuario);
 }

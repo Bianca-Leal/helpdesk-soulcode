@@ -1,7 +1,10 @@
 package com.soulcode.helpdesk.controllers;
 
 import com.soulcode.helpdesk.models.ChamadoModel;
+import com.soulcode.helpdesk.models.UsuarioModel;
 import com.soulcode.helpdesk.repositories.ChamadoRepository;
+import com.soulcode.helpdesk.repositories.UsuarioRepository;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,19 +18,29 @@ import java.util.List;
 public class TecnicoController {
     @Autowired
     ChamadoRepository chamadoRepository;
+    @Autowired
+    UsuarioRepository usuarioRepository;
     @GetMapping("/tecnico/painel-tecnico")
-    public String painelTecnico(Model model) {
+    public String painelTecnico(Model model, HttpSession session) {
+        UsuarioModel usuarioLogado = (UsuarioModel) session.getAttribute("usuarioLogado");
+        model.addAttribute("nome", usuarioLogado.getNome());
         return "tecnico/painel-tecnico";
     }
 
     @GetMapping("/tecnico/chamados-atribuidos")
-    public String chamadosAtribuidos(Model model) {
+    public String chamadosAtribuidos(Model model, HttpSession session) {
+        UsuarioModel usuarioLogado = (UsuarioModel) session.getAttribute("usuarioLogado");
+        List<ChamadoModel> items = chamadoRepository.findByIdUsuario(usuarioLogado.getId());
+        model.addAttribute("nome", usuarioLogado.getNome());
+        model.addAttribute("items", items);
         return "tecnico/chamados-atribuidos";
     }
 
     @GetMapping("tecnico/chamados-disponiveis")
-    public String chamadosDisponiveis(Model model) {
-        List<ChamadoModel> items = chamadoRepository.findByStatus("aguardando");
+    public String chamadosDisponiveis(Model model, HttpSession session) {
+        UsuarioModel usuarioLogado = (UsuarioModel) session.getAttribute("usuarioLogado");
+        List<ChamadoModel> items = chamadoRepository.findAll();
+        model.addAttribute("nome", usuarioLogado.getNome());
         model.addAttribute("items", items);
         return "tecnico/chamados-disponiveis";
     }

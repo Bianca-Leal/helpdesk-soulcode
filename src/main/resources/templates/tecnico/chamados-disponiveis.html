@@ -18,6 +18,7 @@
                 <h3>HelpDesk SoulCode</h3>
             </div>
             <ul class="sidebar-menu">
+                <li class="sidebar-menu-item saudacao"> Bem-vinda(o) <label th:text="${nome}"></label></li>
                 <li class="sidebar-menu-item"><a href="/tecnico/painel-tecnico">Painel Técnico</a></li>
                 <li class="sidebar-menu-item"><a href="/index">Sair</a></li>
             </ul>
@@ -46,23 +47,6 @@
                         <td th:text="${item.prioridade}"></td>
                         <td th:text="${item.dataInicio}"></td>
                         <td th:text="${item.chamadoStatus}"></td>
-                    </tr>
-
-                    <tr pe-auto>
-                        <td>Maria Joana</td>
-                        <td>Setor XPTW</td>
-                        <td>Configuração de acesso</td>
-                        <td>Alta</td>
-                        <td>2024-04-19</td>
-                        <td>Aguardando Técnico</td>
-                    </tr>
-                    <tr>
-                        <td>João Eduardo</td>
-                        <td>Setor XPTQ</td>
-                        <td>Aplicação com time out</td>
-                        <td>Média</td>
-                        <td>2024-04-19</td>
-                        <td>Aguardando Técnico</td>
                     </tr>
                     </tbody>
                 </table>

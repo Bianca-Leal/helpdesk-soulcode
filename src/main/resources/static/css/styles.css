@@ -53,6 +53,10 @@
         width: 100%;
         height: auto;
     }
+
+}
+.hidden-input {
+    display: none;
 }
 
 .saudacao{

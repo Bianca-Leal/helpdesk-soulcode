@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,8 +18,8 @@
                 <h3>HelpDesk SoulCode</h3>
             </div>
             <ul class="sidebar-menu">
-
-                <li class="sidebar-menu-item"><a href="/usuario/painel-usuario?nome=">Painel usuário</a></li>
+                <li class="sidebar-menu-item saudacao"> Bem-vinda(o) <label th:text="${nome}"></label></li>
+                <li class="sidebar-menu-item"><a href="/usuario/painel-usuario">Painel usuário</a></li>
                 <li class="sidebar-menu-item"><a href="/index">Sair</a></li>
             </ul>
         </div>
@@ -33,30 +33,10 @@
                         <th>Data de Início</th>
                         <th>Status</th>
                     </tr>
-                    <tr>
-                        <td>Lorem ipsum ultrices interdum a eget turpis lorem venenatis sagittis blandit erat</td>
-                        <td>2024-04-19</td>
-                        <td>Em atendimento</td>
-                    </tr>
-                    <tr>
-                        <td>Lorem ipsum ultrices interdum a eget turpis lorem venenatis sagittis blandit erat</td>
-                        <td>2024-04-19</td>
-                        <td>Aguardando Técnico</td>
-                    </tr>
-                    <tr>
-                        <td>Lorem ipsum ultrices interdum a eget turpis lorem venenatis sagittis blandit erat</td>
-                        <td>2024-04-19</td>
-                        <td>Em atendimento</td>
-                    </tr>
-                    <tr>
-                        <td>Lorem ipsum ultrices interdum a eget turpis lorem venenatis sagittis blandit erat</td>
-                        <td>2024-04-19</td>
-                        <td>Em atendimento</td>
-                    </tr>
-                    <tr>
-                        <td>Lorem ipsum ultrices interdum a eget turpis lorem venenatis sagittis blandit erat</td>
-                        <td>2024-04-19</td>
-                        <td>Em atendimento</td>
+                    <tr th:each="dado : ${dados}">
+                        <td th:text="${dado.dataInicio}"></td>
+                        <td th:text="${dado.chamadoStatus}"></td>
+                        <td th:text="${dado.descricao}"></td>
                     </tr>
                     <!-- Outros chamados seriam listados aqui -->
                 </table>

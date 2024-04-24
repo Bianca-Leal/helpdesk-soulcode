@@ -1,6 +1,6 @@
 <!-- File: novo-chamado.html (Aloque este arquivo em resources/templates/usuario/ ou ajuste conforme sua estrutura de diretórios) -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +18,8 @@
                 <h3>HelpDesk SoulCode</h3>
             </div>
             <ul class="sidebar-menu">
-                <li class="sidebar-menu-item"><a href="/usuario/painel-usuario?nome=">Painel usuário</a></li>
+                <li class="sidebar-menu-item saudacao"> Bem-vinda(o) <label th:text="${nome}"></label></li>
+                <li class="sidebar-menu-item"><a href="/usuario/painel-usuario">Painel usuário</a></li>
                 <li class="sidebar-menu-item"><a href="/index">Sair</a></li>
             </ul>
         </div>
@@ -32,12 +33,6 @@
                         </div>
                         <div class="card-body">
                             <form action="/salvarChamado" method="post">
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">Usuário</span>
-                                    </div>
-                                    <input type="number" class="form-control" id="idUsuario" name="idUsuario" placeholder="Digite seu nome">
-                                </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">Descrição</span>
