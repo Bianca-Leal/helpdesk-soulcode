@@ -1,5 +1,5 @@
 
-# HelpDesk - Sistema de Chamados Técnicos em Informática - 
+# HelpDesk - Sistema de Chamados Técnicos em Informática
 
 Este projeto é um sistema de gerenciamento de chamados técnicos para um departamento de informática. O sistema permite que usuários solicitem atendimentos técnicos e que técnicos gerenciem esses chamados.
 
