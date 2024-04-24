@@ -34,9 +34,10 @@
                         <th>Status</th>
                     </tr>
                     <tr th:each="dado : ${dados}">
+                        <td th:text="${dado.descricao}"></td>
                         <td th:text="${dado.dataInicio}"></td>
                         <td th:text="${dado.chamadoStatus}"></td>
-                        <td th:text="${dado.descricao}"></td>
+
                     </tr>
                     <!-- Outros chamados seriam listados aqui -->
                 </table>
