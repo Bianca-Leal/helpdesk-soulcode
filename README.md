@@ -1,9 +1,7 @@
 
-#  Sistema de Chamados Técnicos em Informática - HelpDesk
+# HelpDesk - Sistema de Chamados Técnicos
 
 Este projeto é um sistema de gerenciamento de chamados técnicos para um departamento de informática. O sistema permite que usuários solicitem atendimentos técnicos e que técnicos gerenciem esses chamados.
-
-
 
 
 ## Funcionalidades
@@ -58,20 +56,19 @@ mvn spring-boot:run
 
 - [Stephanie Lima](https://www.linkedin.com/in/stephanie-lima-rocha-07389291/)
 
-- [Aline](https://www.linkedin.com/in/alinealvesdacosta/)
-
 - [Daniela Botelho](https://www.linkedin.com/in/dani-botelho/)
-
-- [Cecilia](https://www.linkedin.com/in/cec%C3%ADlia-galv%C3%A3o/)
 
 - [Gabriele Stephanie](https://www.linkedin.com/in/gabrielle-mestrinho-b162661b9/)
 
-- [Daniela Sousa](https://www.linkedin.com/in/daniela-sousa-lima/)
-
 - [Karen Nogueira](https://www.linkedin.com/in/karennogueira/)
 
-- [Alyce]
+- [Aline](https://www.linkedin.com/in/alinealvesdacosta/)
 
+- [Alyce](https://www.linkedin.com/in/alycequegi/)
+
+- [Daniela Sousa](https://www.linkedin.com/in/daniela-sousa-lima/)
+
+- [Cecilia](https://www.linkedin.com/in/cec%C3%ADlia-galv%C3%A3o/)
 
 ## Licença
 
