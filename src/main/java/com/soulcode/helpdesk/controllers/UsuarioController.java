@@ -28,12 +28,12 @@ public class UsuarioController {
         String tela = null;
         for (UsuarioModel value : users) {
             if (value.getTipoUsuario().equals("tecnico")) {
-                tela = "redirect:/tecnico/painel-tecnico?nome=" + value.getNome() + "?id=" + value.getId();
+                tela = "redirect:/tecnico/painel-tecnico";
                 usuarioLogado.setNome(value.getNome());
                 usuarioLogado.setId(value.getId());
                 session.setAttribute("usuarioLogado", usuarioLogado);
             } else {
-                tela = "redirect:/usuario/painel-usuario?nome=" + value.getNome() + "?id=" + value.getId();
+                tela = "redirect:/usuario/painel-usuario";
                 usuarioLogado.setNome(value.getNome());
                 usuarioLogado.setId(value.getId());
                 session.setAttribute("usuarioLogado", usuarioLogado);
