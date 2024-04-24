@@ -2,8 +2,12 @@ package com.soulcode.helpdesk.models;
 
 import jakarta.persistence.*;
 
+import lombok.Getter;
+import lombok.Setter;
+
 @Entity
 @Table(name = "TB_CHAMADO")
+@Getter @Setter
 public class ChamadoModel {
 
     @Id
@@ -21,62 +25,6 @@ public class ChamadoModel {
     private String dataInicio;
     @Column
     private String chamadoStatus;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getIdUsuario() {
-        return idUsuario;
-    }
-
-    public void setIdUsuario(Long idUsuario) {
-        this.idUsuario = idUsuario;
-    }
-
-    public String getSetor() {
-        return setor;
-    }
-
-    public void setSetor(String setor) {
-        this.setor = setor;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
-    public String getPrioridade() {
-        return prioridade;
-    }
-
-    public void setPrioridade(String prioridade) {
-        this.prioridade = prioridade;
-    }
-
-    public String getDataInicio() {
-        return dataInicio;
-    }
-
-    public void setDataInicio(String dataInicio) {
-        this.dataInicio = dataInicio;
-    }
-
-    public String getChamadoStatus() {
-        return chamadoStatus;
-    }
-
-    public void setChamadoStatus(String chamadoStatus) {
-        this.chamadoStatus = chamadoStatus;
-    }
 
     public ChamadoModel() {
     }
