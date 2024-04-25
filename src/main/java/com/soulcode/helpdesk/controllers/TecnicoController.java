@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -45,9 +46,16 @@ public class TecnicoController {
         return "tecnico/chamados-disponiveis";
     }
 
-    @PostMapping("/tecnico/modificar-status")
-    public String modificarStatus(@RequestParam("id") Long id,
-                                  @RequestParam("novoStatus") String novoStatus) {
-        return "redirect:/tecnico";
+    @GetMapping("/tecnico/modificar-status")
+    public String modificarStatus() {
+        return "tecnico/modificar-status";
+    }
+
+    @GetMapping("/tecnico/modificar-status/{id}")
+    public String modificarStatus(@PathVariable Long id, Model model, HttpSession session) {
+        UsuarioModel usuarioLogado = (UsuarioModel) session.getAttribute("usuarioLogado");
+        ChamadoModel chamado = chamadoRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Chamado inválido"));
+        model.addAttribute("chamado", chamado);
+        return "tecnico/chamados-atribuidos";
     }
 }

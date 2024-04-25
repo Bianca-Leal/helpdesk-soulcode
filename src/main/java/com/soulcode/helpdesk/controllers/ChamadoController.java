@@ -16,6 +16,10 @@ public class ChamadoController {
     @Autowired
     ChamadoRepository chamadoRepository;
 
+    /*passar dados do controlador para a visualização (view).
+     Ela encapsula tanto os dados do modelo (model) quanto as informações sobre a visualização a
+      ser renderizada*/
+
     @GetMapping("/usuario/novo-chamado")
     public ModelAndView minhaPagina(HttpSession session) {
         // Obter o usuário logado da sessão

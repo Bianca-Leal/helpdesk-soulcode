@@ -37,6 +37,7 @@
                         <th>Prioridade</th>
                         <th>Data de Início</th>
                         <th>Status</th>
+                        <th></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -47,6 +48,7 @@
                         <td th:text="${item.prioridade}"></td>
                         <td th:text="${item.dataInicio}"></td>
                         <td th:text="${item.chamadoStatus}"></td>
+                        <td><a href="/tecnico/modificar-status" class="btn btn-success btn-block">Editar</a></td>
                     </tr>
                     </tbody>
                 </table>
